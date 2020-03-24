@@ -195,6 +195,8 @@ def WebsterMethod(flow1,flow2,S1,S2):
     R2 = Cycle - (G1 + L)
 
     InsertMySQL(G1,R1)
+    InsertLane1(G1,R1)
+    InsertLane2(G1,R1)
 
 
 if __name__ == '__main__':
@@ -223,6 +225,10 @@ if __name__ == '__main__':
             print >>sys.stderr, '\nlane2'
             
         if lane1 == 1 and lane2 == 1:
+
+            SelectMySQL()
+            
+
             
             flow = randint(10,30)
             p1 = flow + 5
